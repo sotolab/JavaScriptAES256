@@ -5,8 +5,9 @@
 </head>
 
 <script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
- 
 <script>
+ //<button id="button1" onclick="button1_click();">Ok</button>
+ 
 function button1_click() {
 var key = "haveanicedayhaveanicedayhaveanic"; // 32byte
 // The initialization vector (must be 16 bytes)
@@ -49,11 +50,9 @@ document.getElementById("emessage").textContent = decryptedText;
 <body>
  <H1> HTML AES256 </H>
   <div class="container">
-  <button id="button1" onclick="button1_click();">실행</button>
   </div>
  <h5>원본메시지  <div id="pmessage"></div> </h5>
  <h5>암호메시지  <div id="emessage"></div> </h5>
- 
 </body>
 <footer class="py-5 bg-dark">
   <div class="container">
