@@ -3,21 +3,11 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
-<body>
- <H1> HTML AES256 </H>
- <h5>원본메시지  <div id="pmessage"></div> </h5>
- <h5>암호메시지  <div id="emessage"></div> </h5>
- 
-</body>
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white"><b>Copyright &copy; Sunstar 2019</b></p>
-  </div>
-</footer>
-</html>
+
 <script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
  
 <script>
+function button1_click() {
 var key = "haveanicedayhaveanicedayhaveanic"; // 32byte
 // The initialization vector (must be 16 bytes)
 var iv = [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,35, 36 ];
@@ -52,5 +42,22 @@ var decryptedBytes = aesCbc.decrypt(encryptedBytes);
 var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes).trim();
 //document.body.append(decryptedText);
 document.getElementById("emessage").textContent = decryptedText;
+}
 </script>
 
+
+<body>
+ <H1> HTML AES256 </H>
+  <div class="container">
+  <button id="button1" onclick="button1_click();">실행</button>
+  </div>
+ <h5>원본메시지  <div id="pmessage"></div> </h5>
+ <h5>암호메시지  <div id="emessage"></div> </h5>
+ 
+</body>
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white"><b>Copyright &copy; Sunstar 2019</b></p>
+  </div>
+</footer>
+</html>
